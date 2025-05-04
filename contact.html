@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/contact.css" />
+  <script src="assets/js/contact.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Logo</h1>
+    <nav style="display: flex; justify-content: center; gap: 1.5rem; flex-grow: 1;">
+      <a href="home.html">Home</a>
+      <a href="pricelist.html">Pricelist</a>
+      <a href="about-us.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="login-nav">
+      Login/Regist
+    </button>
+  </header>
+
+  <main>
+    <div class="contact-container">
+      <div class="contact-form">
+        <h1>Inbox</h1>
+        <form id="contactForm" onsubmit="return validateForm()">
+          <input type="text" id="name" placeholder="Name" required/>
+          <input type="email" id="email" placeholder="Email" required/>
+          <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>        
+      </div>
+
+      <div class="contact-info">
+        <h2>More Info</h2>
+        <div class="info-item">
+          <img src="assets/img/gm-icon.png" alt="email" />
+          info@gmail.com
+        </div>
+        <div class="info-item">
+          <img src="assets/img/wa-icon.png" alt="phone" />
+          +62 123 456 789
+        </div>
+        <div class="info-item">
+          <img src="assets/img/lc-icon.png" alt="location" />
+          Politeknik Manado
+        </div>
+        <div class="info-item">
+          <img src="assets/img/tm-icon.png" alt="clock" />
+          24 hours
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
