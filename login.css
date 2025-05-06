@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('background.png'); /* Adjust path as needed */
+  background-size: auto;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 320px;
+  height: 440px;
+  backdrop-filter: blur(10px);
+}
+
+.avatar {
+  width: 200x;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto 2px;
+  background-image: url('Profile.png'); /* Profile image used as background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: white;
+  color: #ff4081;
+  border: #ff4081 2px inset;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+a {
+  color: #ff4081;
+  text-decoration: none;
+}
+
+.signup {
+  font-size: 14px;
+}
+.name {
+    display: flex;
+    
+}
+
+.PAS {
+width: 80%;
+  padding: 10px;
+  margin-left:  10px;
+  margin-right: 10PX;
+  margin-bottom: 15px;
+  border: 1px solid #ff4081;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.name input {
+  width: 107px;
+  padding: 10px;
+  margin-left:  10px;
+  margin-right: 10PX;
+  margin-bottom: 15px;
+  border: 1px solid #ff4081;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.checkbox1 {
+    display: flex;
+}
+.checkbox1 input {
+    margin: 90px;
+}
+
+.checkbox1 label {
+    font-size: 400000px;
+}
+
+.custom-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
