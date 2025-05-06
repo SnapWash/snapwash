@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <title>Login Form</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="login.css">
+  <title>Register Form</title>
 </head>
 <body>
-    <div class="container">
-        <div class="avatar"></div>
-        <form class="login-form">
-            <div class="name">
-                <input type="text" placeholder="First name" required>
-                <input type="text" placeholder="Last Name" required>
-            </div>
-            <input class="PAS" type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p class="signup">ALREADY HAVE AN ACCOUNT? <a href="login.html">SIGN UP</a></p>
-    </div>
+  <div class="container">
+    <div class="avatar"></div>
+    
+    <!-- Container untuk menampilkan notifikasi error -->
+    <div id="error-message" style="display: none; text-align: center; color: red; margin-bottom: 1rem;"></div>
+    
+    <form class="login-form" action="server.php" method="post">
+      <div class="name">
+        <input type="text" name="first_name" placeholder="First name" required>
+        <input type="text" name="last_name" placeholder="Last Name" required>
+      </div>
+      <input class="PAS" type="text" name="no_hp" placeholder="No wa" required>
+      <input class="PAS" type="password" name="password" placeholder="Password" required>
+      <button type="submit">Create</button>
+    </form>
+    <p class="signup">ALREADY HAVE AN ACCOUNT? <a href="login.html">SIGN UP</a></p>
+  </div>
+  
+  <script>
+    // Ambil parameter 'error' dari URL jika ada
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get('error');
+    if (error) {
+      const errorMessage = document.getElementById('error-message');
+      errorMessage.textContent = error;
+      errorMessage.style.display = 'block';
+      
+      // Menghapus parameter error dari URL tanpa reload halaman
+      const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+      window.history.replaceState({}, document.title, newUrl);
+    }
+  </script>
 </body>
 </html>

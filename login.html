@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <title>Login Form</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="login.css">
+  <title>Login Form</title>
 </head>
 <body>
-    <div class="container">
-        <div class="avatar"></div>
-        <form class="login-form">
-            <input class="PAS" type="text" placeholder="Username" required>
-            <input class="PAS" type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p class="signup">DON'T HAVE AN ACCOUNT? <a href="regist.html">SIGN UP</a></p>
-    </div>
+  <div class="container">
+    <div class="avatar"></div>
+    <form class="login-form" action="server.php" method="post">
+      <input class="PAS" type="text" name="no_hp" placeholder="No HandPhone" required>
+      <input class="PAS" type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    
+    <!-- Error message akan muncul di sini jika terjadi kesalahan -->
+    <div id="error-message" style="display:none; text-align:center; color:red; margin-top:10px;"></div>
+    
+    <p class="signup">DON'T HAVE AN ACCOUNT? <a href="regist.html">SIGN UP</a></p>
+  </div>
+  
+  <script>
+    // Ambil parameter 'error' dari URL jika ada
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get('error');
+    if (error) {
+      const errorMessage = document.getElementById('error-message');
+      errorMessage.textContent = error;
+      errorMessage.style.display = 'block';
+
+      // Optional: Hilangkan query parameter dari URL tanpa reload halaman
+      const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+      window.history.replaceState({}, document.title, newUrl);
+    }
+  </script>
 </body>
 </html>
