@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  height: 100vh;
+  /*background-image: url('background.png'); /* Adjust path as needed */
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+    background-color: pink;
+    display: inline-block; /* key part */
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.line {
+    height: 1px;
+    background-color: black;
+    width: 80%;
+    margin-left: 45px;
+}
+.input {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input input {
+    border: none;
+    padding: 20px;
+    font-weight: 1000;
+    color: black;
+    font-size: 20px ;
+    margin-left: 30px;
+}
+
+.input::input-placeholder {
+    opacity: 1;
+    color: pink;
+}
+
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: black#fff;
+  position: relative;
+  padding-left: 35px;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  border: 2px solid #ff4081;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #ff4081;
+}
+
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  display: block;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
+
+button {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  display: flex;
+  align-items: left;
+}
+
+button:hover {
+  background-color: white;
+  color: #ff4081;
+  border: #ff4081 2px inset;
+}

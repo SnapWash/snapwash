@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Styled Table Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        .navbar {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            position: fixed;
+            top: 0;
+            background-color: #ff4081;
+            z-index: 10;
+            color: white;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+        }
+        .maindas {
+            display: flex;
+            margin-top: 100px;
+        }
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #ff4081;
+            padding: 20px;
+            color: white;
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar ul li {
+            margin-bottom: 50px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #ff4081;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Dashboard</h1>
+        <a href="index.html">
+            <h1>
+            <i class="fa-solid fa-right-from-bracket"></i></i>Logout
+        </h1>
+        </a>
+    </div>
+
+    <div class="maindas">
+        <div class="sidebar">
+            <ul>
+                <li>Dashboard</li>
+                <li>Register User</li>
+                <li>Order Details</li>
+            </ul>
+        </div>
+
+        <div style="flex: 1;">
+            <div style="display: flex; justify-content: space-between; margin: 20px;">
+                <h1>Dashboard</h1>
+                <input style="padding: 5px;" type="text" placeholder="search">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Address</th>
+                        <th>Date</th>
+                        <th>Total Prize</th>
+                        <th>View Order</th>
+                        <th>Description</th>
+                        <th>Status Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>John Doe</td>
+                        <td>08123456789</td>
+                        <td>New York</td>
+                        <td>2025-05-01</td>
+                        <td>$150</td>
+                        <td><button>View</button></td>
+                        <td>2 items</td>
+                        <td><button>Update</button></td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Jane Smith</td>
+                        <td>08223344556</td>
+                        <td>Los Angeles</td>
+                        <td>2025-05-03</td>
+                        <td>$200</td>
+                        <td><button>View</button></td>
+                        <td>3 items</td>
+                        <td><button>Update</button></td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Sam Brown</td>
+                        <td>08334455667</td>
+                        <td>Chicago</td>
+                        <td>2025-05-05</td>
+                        <td>$180</td>
+                        <td><button>View</button></td>
+                        <td>1 item</td>
+                        <td><button>Update</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
