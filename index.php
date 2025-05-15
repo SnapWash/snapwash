@@ -11,12 +11,23 @@
   <header>
     <h1>Logo</h1>
     <nav style="display: flex; justify-content: center; gap: 1.5rem; flex-grow: 1;">
-      <a href="index.html">Home</a>
+      <a href="index.php">Home</a>
       <a href="page/pricelist.html">Pricelist</a>
       <a href="page/about-us.html">About Us</a>
       <a href="page/contact.html">Contact</a>
     </nav>
-    <div id="authControl"></div>
+    <div id="authControl">
+      <?php
+        session_start();
+        if (isset($_SESSION['user_id'])) {
+          echo '<form method="GET" action="server.php" style="display:inline;">
+                  <button type="submit" name="action" value="logout" class="login-nav">Logout</button>
+                </form>';
+        } else {
+          echo '<a href="page/login.html" class="login-nav">Login/Regist</a>';
+        }
+      ?>
+    </div>
   </header>
 
   <main>
