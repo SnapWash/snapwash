@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="../assets/css/login.css">
   <title>Login Form</title>
 </head>
 <body>
   <div class="container">
     <div class="avatar"></div>
-    <form class="login-form" action="server.php" method="post">
+      <form class="login-form" action="../server.php" method="post">
       <input class="PAS" type="text" name="no_hp" placeholder="Phone Number" required>
       <input class="PAS" type="password" name="password" placeholder="Password" required>
       <button type="submit">Login</button>
@@ -18,7 +18,7 @@
     <!-- Error message akan muncul di sini jika terjadi kesalahan -->
     <div id="error-message" style="display:none; text-align:center; color:red; margin-top:10px;"></div>
     
-    <p class="signup">DON'T HAVE AN ACCOUNT? <a href="regist.html">SIGN UP</a></p>
+    <p class="signup">DON'T HAVE AN ACCOUNT? <a href="../regist.html">SIGN UP</a></p>
   </div>
   
   <script>

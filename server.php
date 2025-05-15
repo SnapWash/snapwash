@@ -37,7 +37,6 @@ if (!$conn) {
     die("<p style='color: red;'>Koneksi gagal: " . mysqli_connect_error() . "</p>");
 }
 
-<<<<<<< HEAD
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     /* 
@@ -63,26 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_stmt_store_result($checkStmt);
         if (mysqli_stmt_num_rows($checkStmt) > 0) {
             // Jika no_hp sudah ada, redirect kembali ke regist.html dengan pesan error
-=======
-// Cek apakah request adalah POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    if (isset($_POST["first_name"]) && isset($_POST["last_name"]) &&
-        trim($_POST["first_name"]) != "" && trim($_POST["last_name"]) != "") {
-
-        // === REGISTRASI ===
-        $first_name = trim(mysqli_real_escape_string($conn, $_POST["first_name"]));
-        $last_name  = trim(mysqli_real_escape_string($conn, $_POST["last_name"]));
-        $no_hp      = trim(mysqli_real_escape_string($conn, $_POST["no_hp"]));
-        $password   = $_POST["password"];
-
-        $checkStmt = mysqli_prepare($conn, "SELECT no_hp FROM users WHERE no_hp = ?");
-        mysqli_stmt_bind_param($checkStmt, "s", $no_hp);
-        mysqli_stmt_execute($checkStmt);
-        mysqli_stmt_store_result($checkStmt);
-
-        if (mysqli_stmt_num_rows($checkStmt) > 0) {
->>>>>>> 65395a428cabd7ff2e1d9a2d83c73cc955020a87
             mysqli_stmt_close($checkStmt);
             header("Location: regist.html?error=" . urlencode("No WA sudah terdaftar!"));
             exit();
